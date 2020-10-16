@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { VictoryChart, VictoryLine, VictoryTheme, VictoryContainer, VictoryLegend } from 'victory'
+import { func } from './spline'
 
 function Chart() {
 
@@ -21,7 +22,7 @@ function Chart() {
                                    labels: { fill: 'd00f50' }
                                },
                                {
-                                   name: 'Graph of a Newton polynomial',
+                                   name: 'Graph of a spline polynomial',
                                    symbol: { fill: '4256b1' },
                                    labels: { fill: '4256b1' }
                                },
@@ -34,7 +35,7 @@ function Chart() {
                                  stroke: '#d00f50'
                              }
                          } }/>
-            <VictoryLine data={ newton }
+            <VictoryLine data={ [{ x: 1, y: 1 }] }
                          animate={ {
                              duration: 1500
                          } }
