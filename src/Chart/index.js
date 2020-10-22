@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { VictoryChart, VictoryLine, VictoryTheme, VictoryContainer, VictoryLegend } from 'victory'
-import { func } from './spline'
+import { func, spline } from './spline'
 
 function Chart() {
 
@@ -15,7 +15,13 @@ function Chart() {
             <VictoryLegend x={ 200 } y={ 50 }
                            orientation="horizontal"
                            gutter={ 20 }
+                           itemsPerRow={2}
                            data={ [
+                               {
+                                   name: 'Graph of a spline polynomial',
+                                   symbol: { fill: '4256b1' },
+                                   labels: { fill: '4256b1' }
+                               },
                                {
                                    name: 'Graph of a function',
                                    symbol: { fill: 'd00f50' },
@@ -23,9 +29,9 @@ function Chart() {
                                },
                                {
                                    name: 'Graph of a spline polynomial',
-                                   symbol: { fill: '4256b1' },
-                                   labels: { fill: '4256b1' }
-                               },
+                                   symbol: { fill: '10e300' },
+                                   labels: { fill: '10e300' }
+                               }
                            ] }
             />
             <VictoryLine data={ func }
@@ -35,15 +41,14 @@ function Chart() {
                                  stroke: '#d00f50'
                              }
                          } }/>
-            <VictoryLine data={ [{ x: 1, y: 1 }] }
-                         animate={ {
-                             duration: 1500
-                         } }
-                         style={ {
-                             data: {
-                                 stroke: '#4256b1'
-                             }
-                         } }/>
+            {spline.map((item) => (<VictoryLine data={ item.points }
+                                                animate={ { duration: 1500, delay: 1000 } }
+                                                style={ {
+                                                    data: {
+                                                        stroke: item.color
+                                                    }
+                                                } }/>))}
+
         </VictoryChart>
     </Fragment>)
 }
