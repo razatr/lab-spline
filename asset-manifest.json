@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/lab-spline/static/js/main.aa04feef.chunk.js",
+    "main.js.map": "/lab-spline/static/js/main.aa04feef.chunk.js.map",
+    "runtime-main.js": "/lab-spline/static/js/runtime-main.9aaa66a4.js",
+    "runtime-main.js.map": "/lab-spline/static/js/runtime-main.9aaa66a4.js.map",
+    "static/js/2.dac3d163.chunk.js": "/lab-spline/static/js/2.dac3d163.chunk.js",
+    "static/js/2.dac3d163.chunk.js.map": "/lab-spline/static/js/2.dac3d163.chunk.js.map",
+    "index.html": "/lab-spline/index.html",
+    "precache-manifest.75c9747d475b37d668978489cfe47eae.js": "/lab-spline/precache-manifest.75c9747d475b37d668978489cfe47eae.js",
+    "service-worker.js": "/lab-spline/service-worker.js",
+    "static/js/2.dac3d163.chunk.js.LICENSE.txt": "/lab-spline/static/js/2.dac3d163.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9aaa66a4.js",
+    "static/js/2.dac3d163.chunk.js",
+    "static/js/main.aa04feef.chunk.js"
+  ]
+}
