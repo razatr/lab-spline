@@ -24,7 +24,6 @@ const b = [0]
 const c = [0]
 const d = [0]
 
-
 for (let i = 1; i < n; i++) {
     h[i] = points[i] - points[i - 1]
 }
@@ -73,6 +72,7 @@ for (let i = n - 2; i > 0; i--) {
 
 export const test = []
 
+//функция кубического многочлена
 function cubicPolynomial(x, i) { //i = 1,2 ... n
     return (
         (m[i - 1] * Math.pow(points[i] - x, 3)) / (6 * h[i]) +
@@ -82,6 +82,7 @@ function cubicPolynomial(x, i) { //i = 1,2 ... n
     )
 }
 
+//получение массива точек для постоения графика
 function getPointsOfPolynomial(index) {
     const res = []
     for (let i = Math.round(points[index - 1] * 20); i <= Math.round(points[index] * 20); i++) {
